@@ -19,11 +19,11 @@
     <!-- build:css({.tmp,client}) app/app.css -->
     <link rel="stylesheet" href="app/app.css">
       <!-- injector:css -->
-      <link rel="stylesheet" href="app/account/login/login.css">
-      <link rel="stylesheet" href="app/admin/admin.css">
-      <link rel="stylesheet" href="app/app.css">
-      <link rel="stylesheet" href="app/main/main.css">
-      <link rel="stylesheet" href="components/modal/modal.css">
+      <link rel="stylesheet" href="/public/app/account/login/login.css">
+      <link rel="stylesheet" href="/public/app/admin/admin.css">
+      <link rel="stylesheet" href="/public/app/app.css">
+      <link rel="stylesheet" href="/public/app/main/main.css">
+      <link rel="stylesheet" href="/public/components/modal/modal.css">
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
@@ -61,6 +61,7 @@
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
       <script src="bower_components/angular-socket-io/socket.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/angular-qr-scanner/qr-scanner.js"></script>
       <!-- endbower -->
       <script src="socket.io-client/socket.io.js"></script>
     <!-- endbuild -->
@@ -70,20 +71,20 @@
         
         <script src="app/app.js"></script>
           <!-- injector:js -->
-          <script src="app/account/account.js"></script>
-          <script src="app/account/login/login.controller.js"></script>
-          <script src="app/account/settings/settings.controller.js"></script>
-          <script src="app/account/signup/signup.controller.js"></script>
-          <script src="app/admin/admin.controller.js"></script>
-          <script src="app/admin/admin.js"></script>
-          <script src="app/main/main.controller.js"></script>
-          <script src="app/main/main.js"></script>
-          <script src="components/auth/auth.service.js"></script>
-          <script src="components/auth/user.service.js"></script>
-          <script src="components/modal/modal.service.js"></script>
-          <script src="components/mongoose-error/mongoose-error.directive.js"></script>
-          <script src="components/navbar/navbar.controller.js"></script>
-          <script src="components/socket/socket.service.js"></script>
+          <script src="/public/app/account/account.js"></script>
+          <script src="/public/app/account/login/login.controller.js"></script>
+          <script src="/public/app/account/settings/settings.controller.js"></script>
+          <script src="/public/app/account/signup/signup.controller.js"></script>
+          <script src="/public/app/admin/admin.controller.js"></script>
+          <script src="/public/app/admin/admin.js"></script>
+          <script src="/public/app/main/main.controller.js"></script>
+          <script src="/public/app/main/main.js"></script>
+          <script src="/public/components/auth/auth.service.js"></script>
+          <script src="/public/components/auth/user.service.js"></script>
+          <script src="/public/components/modal/modal.service.js"></script>
+          <script src="/public/components/mongoose-error/mongoose-error.directive.js"></script>
+          <script src="/public/components/navbar/navbar.controller.js"></script>
+          <script src="/public/components/socket/socket.service.js"></script>
           <!-- endinjector -->
         <!-- endbuild -->
 </body>
