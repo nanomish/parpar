@@ -10,6 +10,7 @@
   ])
   .factory('Auth', require('./components/auth/auth.service.js'))
   .factory('User', require('./components/auth/user.service.js'))
+  .controller('NavbarCtrl', require('./components/navbar/navbar.controller.js'))
   .config(require('./main/main.js'))
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider

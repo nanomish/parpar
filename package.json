@@ -43,7 +43,7 @@
   },
   "scripts": {
     "start": "node server/app.js",
-    "heroku-postbuild": "bower install",
+    "heroku-postbuild": "bower install && webpack",
     "test": "grunt test",
     "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update"
   },

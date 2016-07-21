@@ -5,7 +5,6 @@
 'use strict';
 
 var errors = require('./components/errors');
-var path = require('path');
 var express = require('express');
 
 module.exports = function(app) {

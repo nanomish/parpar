@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('parparApp')
-  .controller('NavbarCtrl', function ($scope, $location, Auth) {
+module.exports = function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
@@ -20,4 +19,4 @@ angular.module('parparApp')
     $scope.isActive = function(route) {
       return route === $location.path();
     };
-  });
+  }
