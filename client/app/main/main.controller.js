@@ -1,12 +1,13 @@
 'use strict';
+const socket = require('../components/socket/socket.service.js');
+const barcodeScanner = {};
 
-angular.module('parparApp')
-  .controller('MainCtrl', function ($scope, $http, socket, barcodeScanner) {
+module.exports = function ($scope, $http) {
     $scope.awesomeThings = [];
 
     $http.get('/api/things').success(function(awesomeThings) {
       $scope.awesomeThings = awesomeThings;
-      socket.syncUpdates('thing', $scope.awesomeThings);
+      // socket.syncUpdates('thing', $scope.awesomeThings);
     });
 
     $scope.addThing = function() {
@@ -22,7 +23,7 @@ angular.module('parparApp')
     };
 
     $scope.$on('$destroy', function () {
-      socket.unsyncUpdates('thing');
+      // socket.unsyncUpdates('thing');
     });
 
 	$scope.onSuccess = function(data) {
@@ -45,4 +46,4 @@ angular.module('parparApp')
       alert(err);
     });
   };
-  });
+}

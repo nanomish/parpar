@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('parparApp')
-  .factory('User', function ($resource) {
+module.exports = exports = function ($resource) {
     return $resource('/api/users/:id/:controller', {
       id: '@_id'
     },
@@ -18,5 +17,5 @@ angular.module('parparApp')
           id:'me'
         }
       }
-	  });
   });
+}

@@ -1,17 +1,12 @@
 'use strict';
 
-// set "init" as dependecy
-//require('parparInit');
-
-angular.module('parparApp')
-  .factory('Auth', function Auth($location, $rootScope, $http, User, $cookieStore, $q) {
+module.exports = exports = function Auth($location, $rootScope, $http, User, $cookieStore, $q) {
     var currentUser = {};
     if($cookieStore.get('token')) {
       currentUser = User.get();
     }
 
     return {
-
       /**
        * Authenticate user and save token
        *
@@ -146,4 +141,4 @@ angular.module('parparApp')
         return $cookieStore.get('token');
       }
     };
-  });
+}

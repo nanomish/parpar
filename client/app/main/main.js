@@ -1,11 +1,10 @@
 'use strict';
 
-angular.module('parparApp')
-  .config(function ($stateProvider) {
+module.exports = exports = function ($stateProvider) {
     $stateProvider
       .state('main', {
         url: '/',
         templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
+        controller: require('./main.controller.js')
       });
-  });
+  }

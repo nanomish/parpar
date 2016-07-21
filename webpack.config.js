@@ -6,9 +6,7 @@ module.exports = {
     path.resolve('client/app/app.js')
   ],
   output: {
-    path: 'public/',
+    path: 'public/js/',
     filename: 'main.app.js'
   }
-}
-
-
+};
