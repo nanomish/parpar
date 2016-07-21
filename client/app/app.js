@@ -1,25 +1,35 @@
 'use strict';
 // init
-require('angular');
-require('angular-cookies');
-require('angular-resource');
-require('angular-sanitize');
-require('json3');
-require('lodash');
-require('angular-ui-router');
-require('angular-bootstrap');
-require('./components/auth/auth.service.js');
 
-angular.module('parparApp', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
-  'ui.router',
-  'ui.bootstrap'
-  //'barcodeScanner'
+
+define('parparInit', [], function() {
+  require('angular');
+  require('angular-cookies');
+  require('angular-resource');
+  require('angular-sanitize');
+  require('json3');
+  require('lodash');
+  require('angular-ui-router');
+  require('angular-bootstrap');
+
+  angular.module('parparApp', [
+    'ngCookies',
+    'ngResource',
+    'ngSanitize',
+    'ui.router',
+    'ui.bootstrap'
+    //'barcodeScanner'
   ]);
+});
 
 // App
+require(['parparInit'], function (a) {
+  console.log(a);
+});
+console.log(parparInit);
+require('./components/auth/auth.service.js');
+
+
   angular.module('parparApp')
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     console.log('Running config');
