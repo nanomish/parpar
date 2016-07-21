@@ -29,7 +29,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     yeoman: {
       // configurable paths
-      client: require('./bower.json').appPath || 'public',
+      client: require('./bower.json').appPath || 'client',
       dist: 'dist'
     },
     express: {

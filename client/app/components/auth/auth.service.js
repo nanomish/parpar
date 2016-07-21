@@ -1,5 +1,8 @@
 'use strict';
 
+// set "init" as dependecy
+require('angular');
+
 angular.module('parparApp')
   .factory('Auth', function Auth($location, $rootScope, $http, User, $cookieStore, $q) {
     var currentUser = {};

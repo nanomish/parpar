@@ -16,7 +16,7 @@ angular.module('parparApp')
       angular.extend(modalScope, scope);
 
       return $modal.open({
-        templateUrl: 'components/modal/modal.html',
+        templateUrl: 'modal.html',
         windowClass: modalClass,
         scope: modalScope
       });
