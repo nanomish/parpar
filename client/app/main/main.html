@@ -27,7 +27,13 @@
     </p>
 <input type="file" accept="image/*;capture=camera">
 	<!--<qr-scanner width="400" height="300" ng-success="onSuccess(data)" ng-error="onError(error)" />-->
-    <input type="button" ng-click="scan()" />
+   <!-- <barcode-scanner separator-char="separatorChar" trigger-char="triggerChar" scan-callback="scanCallback"
+                     trigger-callback="triggerCallback"></barcode-scanner>-->
+    <barcode-listener
+      on-scan='handleScan'
+      prefix='P%'
+      scan-duration='500'
+      ></barcode-listener>
   </form>
 </div>
 

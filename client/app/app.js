@@ -5,8 +5,7 @@
     require('angular-resource'),
     require('angular-sanitize'),
     require('angular-ui-router'),
-    // require('angular-bootstrap'),
-    //'barcodeScanner'
+    require('angular-barcode-listener')
   ])
   .factory('Auth', require('./components/auth/auth.service.js'))
   .factory('User', require('./components/auth/user.service.js'))

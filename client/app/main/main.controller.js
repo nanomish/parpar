@@ -3,6 +3,8 @@ const socket = require('../components/socket/socket.service.js');
 const barcodeScanner = {};
 
 module.exports = function ($scope, $http) {
+  var vm = this;
+  vm.handleScan = handleScan;
     $scope.awesomeThings = [];
 
     $http.get('/api/things').success(function(awesomeThings) {
@@ -26,7 +28,22 @@ module.exports = function ($scope, $http) {
       // socket.unsyncUpdates('thing');
     });
 
-	$scope.onSuccess = function(data) {
+  function handleScan(a) {
+    console.log('scanned: ' + a);
+  }
+
+  /*$scope.words = [];
+  $scope.triggerChar = 9;
+  $scope.separatorChar = 13;
+  $scope.triggerCallback = function () {
+    $scope.lastTrigger = 'Last trigger callback: ' + new Date().toISOString();
+    $scope.$apply();
+  };
+  $scope.scanCallback = function (word) {
+    $scope.words.push(word);
+    $scope.$apply();
+  };*/
+	/*$scope.onSuccess = function(data) {
         console.log(data);
   };
   $scope.onError = function(error) {
@@ -35,15 +52,7 @@ module.exports = function ($scope, $http) {
   $scope.onVideoError = function(error) {
       console.log(error);
   };
+  */
 
-  $scope.scan = function () {
-    barcodeScanner.scan().then( function (result) {
-      if (result.canceled) {
-        return;
-      }
-      // text from qr code or barcode is contained in result.text
-    }, function (err) {
-      alert(err);
-    });
-  };
+
 }
