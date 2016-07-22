@@ -21,5 +21,5 @@ module.exports = function(app) {
 
   // All other routes should redirect to the index.html
   app.use(express.static('public'));
-  app.use(express.static('client/app'));
+  app.use(express.static('client'));
 };
